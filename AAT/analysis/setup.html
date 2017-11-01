@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../running/" />
+    <link rel="next" href="running.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -106,9 +106,23 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="./">
             
                 <a href="./">
+            
+                    
+                    Analysis Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="setup.html">
+            
+                <a href="setup.html">
             
                     
                     Step 1 - Setup the tutorial
@@ -119,16 +133,9 @@
             
         </li>
     
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="../running/">
+        <li class="chapter " data-level="1.2.2" data-path="running.html">
             
-                <a href="../running/">
+                <a href="running.html">
             
                     
                     Step 2 - Running the task
@@ -139,16 +146,9 @@
             
         </li>
     
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="../modify/">
+        <li class="chapter " data-level="1.2.3" data-path="modify.html">
             
-                <a href="../modify/">
+                <a href="modify.html">
             
                     
                     Step 3 - Modify the task
@@ -159,16 +159,9 @@
             
         </li>
     
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="../track/">
+        <li class="chapter " data-level="1.2.4" data-path="track.html">
             
-                <a href="../track/">
+                <a href="track.html">
             
                     
                     Step 4 -The track loop
@@ -179,16 +172,9 @@
             
         </li>
     
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="5.1" data-path="../pid/">
+        <li class="chapter " data-level="1.2.5" data-path="pid.html">
             
-                <a href="../pid/">
+                <a href="pid.html">
             
                     
                     Step 5 -Particle identification
@@ -199,16 +185,9 @@
             
         </li>
     
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="6.1" data-path="../grid/">
+        <li class="chapter " data-level="1.2.6" data-path="grid.html">
             
-                <a href="../grid/">
+                <a href="grid.html">
             
                     
                     Step 6 -Run your code on GRID
@@ -219,16 +198,9 @@
             
         </li>
     
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="7.1" data-path="../bonus/">
+        <li class="chapter " data-level="1.2.7" data-path="bonus.html">
             
-                <a href="../bonus/">
+                <a href="bonus.html">
             
                     
                     Bonus content
@@ -239,16 +211,9 @@
             
         </li>
     
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="8.1" data-path="../hints/">
+        <li class="chapter " data-level="1.2.8" data-path="hints.html">
             
-                <a href="../hints/">
+                <a href="hints.html">
             
                     
                     Some hints
@@ -256,6 +221,11 @@
                 </a>
             
 
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -304,17 +274,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="step-1">Step 1</h1>
-<p>In these exercises, we will use the example task that was explained in the lesson, and use it as a basis to write a <em>mini-analysis</em>: centrality dependence of charged pion production at mid-rapidity.
-Follow each of the steps in this webpage, and feel free to ask questions at any point!</p>
-<h1 id="obtain-the-code">Obtain the code</h1>
+                                <h1 id="obtain-the-code">Obtain the code</h1>
 <p>Our starting point for these exercises is the example analysis &#x2018;AliAnalysisTaskMyTask.cxx&#x2019; that was covered during the lesson. Of course it wouldn&#x2019;t be very efficient to copy and paste the code for your &#x2018;empty&#x2019; analysis task from the slides of the lecture. You can use different methods to obtain it, suggested here in order of adventerousness</p>
 <ol>
 <li><p>As we have learned in the previous days, programmers use version control systems for developing their code. Use what you have learned during our GIT lectures, and <em>clone</em> the example task repository. You can find it on <a href="https://github.com/rbertens/ALICE_analysis_tutorial" target="_blank">https://github.com/rbertens/ALICE_analysis_tutorial</a></p>
 </li>
-<li><p>The third approach is the most robust: if you have a github account, you can make a <em>fork</em> of the example task repository, by surfing to <a href="https://github.com/rbertens/ALICE_analysis_tutorial" target="_blank">https://github.com/rbertens/ALICE_analysis_tutorial</a> and clicking on <em>fork</em>. If you&#x2019;ve forked the repository, you can proceed to clone it on your laptop, this allows you to develop the code, and push commits to your own fork</p>
-</li>
-<li><p>The quickest way: download the .tar file that you can find attached to today&#x2019;s session&#x2019;s agenda and extract the files to your local hard drive</p>
+<li><p>The second approach is the most robust: if you have a github account, you can make a <em>fork</em> of the example task repository, by surfing to <a href="https://github.com/rbertens/ALICE_analysis_tutorial" target="_blank">https://github.com/rbertens/ALICE_analysis_tutorial</a> and clicking on <em>fork</em>. If you&#x2019;ve forked the repository, you can proceed to clone it on your laptop, this allows you to develop the code, and push commits to your own fork</p>
 </li>
 </ol>
 <p>Whichever approach you chose, the end result should be that you have stored these files on your laptop. One word of caution: _the path in which you store these files cannot contain spaces! E.g. /home/my awesome task/ will not work, use /home/my_awesome_task/ 
@@ -344,7 +309,7 @@ Follow each of the steps in this webpage, and feel free to ask questions at any 
 <h1 id="get-the-data">Get the data</h1>
 <p>To run this task, you will also need to download an input file <strong>AliAOD.root</strong>, which contains some actual reconstructed collisions. We will be looking at Pb-Pb data that was taken in 2015. </p>
 <h2 id="source-your-environment">Source your environment</h2>
-<p>We will get the data form the ALICE file catalogue, so first, we need to make sure that we can access that. Load your ALICE environment like Dario has showed you yesterday, e.g. by doing</p>
+<p>We will get the data form the ALICE file catalogue, so first, we need to make sure that we can access that. Load your ALICE environment like Dario has showed you yesterday, e.g. by doing (note that this command may look a bit different, depending on how you installed the software yesterday)</p>
 <pre><code>alienv enter AliPhysics::latest
 </code></pre><p>You should see which module files are currently loaded, e.g.</p>
 <pre><code>  1) BASE/1.0
@@ -361,7 +326,12 @@ Follow each of the steps in this webpage, and feel free to ask questions at any 
  12) AliPhysics/latest
 Use alienv list to list loaded modules. Use exit to exit this environment.
 </code></pre><p>The module Alien-Runtime is now available, which is what we will use to get our data. </p>
-<h2 id="get-a-valid-token">Get a valid token</h2>
+<p><code>TIP</code></p>
+<p>Did you manage to build AliPhysics yesterday? If not, please ask for help! If we for some reason do not manage to get your laptop ready, you can also do the exercises on lxplus, by first logging into lxplus</p>
+<pre><code>ssh -Y &lt;username&gt;@lxplus.cern.ch
+</code></pre><p>and, once you are logged in, loading the right modules</p>
+<pre><code>/cvmfs/alice.cern.ch/bin/alienv enter VO_ALICE@AliPhysics::vAN-20171101-1
+</code></pre><h2 id="get-a-valid-token">Get a valid token</h2>
 <p>To authenticate yourself, obtain a token</p>
 <pre><code>alien-token-init &lt;username&gt;
 </code></pre><p>where #username# is your CERN username. You should be prompted to provide your PEM pass phrase, which is <strong> not the same as your CERN password </strong> unless you set them to be the same yourself. </p>
@@ -408,7 +378,7 @@ aliensh:[alice] [1] /alice/cern.ch/user/r/rbertens/ &gt;
 <pre><code>cp AliAOD.root file:.
 </code></pre><p>Note the syntax of the copy command. </p>
 <h2 id="trouble-">Trouble ?</h2>
-<p>If for some reason this does not work for you - no fear. You can also download one a file  <a href="ttps://cernbox.cern.ch/index.php/s/ZP2gJBE265FiSAX" target="_blank">here</a> , but first ask one of the helpers to see if we cannot fix it. </p>
+<p>If for some reason this does not work for you - no fear - ask one of the helpers, and they will provide an input file for you.  </p>
 
                                 
                                 </section>
@@ -436,12 +406,12 @@ aliensh:[alice] [1] /alice/cern.ch/user/r/rbertens/ &gt;
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Analysis Tutorial">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../running/" class="navigation navigation-next " aria-label="Next page: Step 2 - Running the task">
+                <a href="running.html" class="navigation navigation-next " aria-label="Next page: Step 2 - Running the task">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -452,7 +422,7 @@ aliensh:[alice] [1] /alice/cern.ch/user/r/rbertens/ &gt;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Step 1 - Setup the tutorial","level":"1.2","depth":1,"next":{"title":"Step 2 - Running the task","level":"2.1","depth":1,"path":"running/README.md","ref":"running/README.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","panels@git+https://github.com/lhcb/gitbook-plugin-panels.git#master","collapsible-menu","block-align","livereload"],"styles":{"website":"css/website.css"},"pluginsConfig":{"collapsible-menu":{},"livereload":{},"block-align":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"panels":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ALICE analysis tutorial","gitbook":"*","description":"Introduction to the common analysis techniques and tools of ALICE."},"file":{"path":"setup/README.md","mtime":"2017-11-01T09:27:15.860Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-01T09:30:47.928Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Step 1 - Setup the tutorial","level":"1.2.1","depth":2,"next":{"title":"Step 2 - Running the task","level":"1.2.2","depth":2,"path":"analysis/running.md","ref":"analysis/running.md","articles":[]},"previous":{"title":"Analysis Tutorial","level":"1.2","depth":1,"path":"analysis/README.md","ref":"analysis/README.md","articles":[{"title":"Step 1 - Setup the tutorial","level":"1.2.1","depth":2,"path":"analysis/setup.md","ref":"analysis/setup.md","articles":[]},{"title":"Step 2 - Running the task","level":"1.2.2","depth":2,"path":"analysis/running.md","ref":"analysis/running.md","articles":[]},{"title":"Step 3 - Modify the task","level":"1.2.3","depth":2,"path":"analysis/modify.md","ref":"analysis/modify.md","articles":[]},{"title":"Step 4 -The track loop","level":"1.2.4","depth":2,"path":"analysis/track.md","ref":"analysis/track.md","articles":[]},{"title":"Step 5 -Particle identification","level":"1.2.5","depth":2,"path":"analysis/pid.md","ref":"analysis/pid.md","articles":[]},{"title":"Step 6 -Run your code on GRID","level":"1.2.6","depth":2,"path":"analysis/grid.md","ref":"analysis/grid.md","articles":[]},{"title":"Bonus content","level":"1.2.7","depth":2,"path":"analysis/bonus.md","ref":"analysis/bonus.md","articles":[]},{"title":"Some hints","level":"1.2.8","depth":2,"path":"analysis/hints.md","ref":"analysis/hints.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["katex","panels@git+https://github.com/lhcb/gitbook-plugin-panels.git#master","collapsible-menu","block-align","livereload"],"styles":{"website":"css/website.css"},"pluginsConfig":{"collapsible-menu":{},"livereload":{},"block-align":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"panels":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ALICE analysis tutorial","gitbook":"*","description":"Introduction to the common analysis techniques and tools of ALICE."},"file":{"path":"analysis/setup.md","mtime":"2017-11-01T18:09:13.062Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-01T18:12:54.267Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
