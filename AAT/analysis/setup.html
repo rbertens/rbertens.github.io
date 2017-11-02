@@ -307,7 +307,7 @@
 </ul>
 <p>Remember, that for now, the name &#x2018;AliAnalysisTaskMyTask&#x2019; doesn&#x2019;t sound so bad, but when you develop a task &#x2018;in real life&#x2019;, make sure to give it a meaningful name, that explains what the task is aimed at.</p>
 <h1 id="get-the-data">Get the data</h1>
-<p>To run this task, you will also need to download an input file <strong>AliAOD.root</strong>, which contains some actual reconstructed collisions. We will be looking at Pb-Pb data that was taken in 2015. </p>
+<p>To run this task, you will also need to download an input file <strong>AliAOD.root</strong>, which contains some actual reconstructed collisions. We will be looking at Pb-Pb data that was taken in 2010. </p>
 <h2 id="source-your-environment">Source your environment</h2>
 <p>We will get the data form the ALICE file catalogue, so first, we need to make sure that we can access that. Load your ALICE environment like Dario has showed you yesterday, e.g. by doing (note that this command may look a bit different, depending on how you installed the software yesterday)</p>
 <pre><code>alienv enter AliPhysics::latest
@@ -373,12 +373,12 @@ Your token is valid until: Wed Nov  1 13:21:18 2017
 aliensh:[alice] [1] /alice/cern.ch/user/r/rbertens/ &gt;
 </code></pre><p>This shell works a lot like a normal unix shell, but it is not! Most of the commands that you have seen earlier this week are available, but not all. </p>
 <p>Move to the directory where the data we are looking for is stored</p>
-<pre><code>cd /alice/data/2015/LHC15o/000246757/pass1/AOD/002/
-</code></pre><p>and copy the AliAOD.root file that is inside this folder to your <strong> local </strong> hard drive by doing</p>
+<pre><code>cd /alice/data/2010/LHC10h/000139107/ESDs/pass2/AOD160/
+</code></pre><p>you will see that this folder contains many numbered sub folders, in which the data is stored. Just 'cd' into a subfolder, and copy the AliAOD.root file that is inside this folder to your <strong> local </strong> hard drive by doing</p>
 <pre><code>cp AliAOD.root file:.
 </code></pre><p>Note the syntax of the copy command. </p>
 <h2 id="trouble-">Trouble ?</h2>
-<p>If for some reason this does not work for you - no fear - ask one of the helpers, and they will provide an input file for you.  </p>
+<p>If for some reason this does not work for you - no fear - ask one of the helpers, and they will provide an input file for you.  Note that the files can be large - if you are working on lxplus, they might not fit into your home folder .</p>
 
                                 
                                 </section>
